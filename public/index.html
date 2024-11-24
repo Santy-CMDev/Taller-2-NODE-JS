@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gestión de Reservas</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="app">
+      <h1>Gestión de Reservas de Salas</h1>
+      <div id="salas">
+        <h2>Agregar Sala</h2>
+        <form id="form-sala">
+          <input type="text" id="nombre-sala" placeholder="Nombre" required />
+          <input
+            type="number"
+            id="capacidad-sala"
+            placeholder="Capacidad"
+            required
+          />
+          <select id="estado-sala">
+            <option value="activo">Activo</option>
+            <option value="inactivo">Inactivo</option>
+          </select>
+          <button type="submit">Agregar</button>
+        </form>
+        <h2>Salas</h2>
+        <ul id="lista-salas"></ul>
+      </div>
+      <div id="reservas">
+        <h2>Agregar Reserva</h2>
+        <form id="form-reserva">
+          <input
+            type="text"
+            id="nombre-reservante"
+            placeholder="Nombre del Reservante"
+            required
+          />
+          <select id="sala-reserva"></select>
+          <input type="datetime-local" id="fecha-inicio" required />
+          <input type="datetime-local" id="fecha-fin" required />
+          <button type="submit">Agregar</button>
+        </form>
+        <h2>Reservas</h2>
+        <ul id="historial-reservas"></ul>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
